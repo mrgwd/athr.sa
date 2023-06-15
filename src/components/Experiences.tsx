@@ -1,16 +1,16 @@
-import { useRef } from "react";
+import { RefObject, useRef } from "react";
 
 import { ArrowLeft2, ArrowRight2 } from "iconsax-react";
 function Experiences() {
-  const leftArrow: any = useRef(0);
-  const slider: any = useRef(0);
-  const rightArrow: any = useRef(0);
+  const leftArrow: RefObject<SVGSVGElement> = useRef(null);
+  const slider: RefObject<HTMLDivElement> = useRef(null);
+  const rightArrow: RefObject<SVGSVGElement> = useRef(null);
 
   const slideRight = () => {
-    slider.current.scrollLeft += 400;
+    slider.current && (slider.current.scrollLeft += 400);
   };
   const slideLeft = () => {
-    slider.current.scrollLeft -= 400;
+    slider.current && (slider.current.scrollLeft -= 400);
   };
   return (
     <div className="container mx-auto my-24 px-4 md:mt-44">
@@ -22,14 +22,14 @@ function Experiences() {
           onClick={slideLeft}
           ref={leftArrow}
           data-arrow-left
-          variant="Broken"
+          variant="Bold"
           className="absolute left-10 top-1/2 hidden -translate-y-1/2 cursor-pointer text-main-med md:block"
         />
         <ArrowRight2
           onClick={slideRight}
           ref={rightArrow}
           data-arrow-right
-          variant="Broken"
+          variant="Bold"
           className="absolute right-10 top-1/2 hidden -translate-y-1/2 cursor-pointer text-main-med md:block"
         />
         <div

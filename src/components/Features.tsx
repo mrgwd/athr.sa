@@ -13,11 +13,11 @@ function features() {
       <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-20 lg:text-2xl">
         كلٌ في مكان واحد
       </h2>
-      <div className="grid grid-cols-2 justify-items-center gap-x-4 gap-y-8 md:grid-cols-3 lg:gap-y-12">
+      <div className="grid grid-cols-2 justify-items-center gap-x-4 gap-y-8 md:grid-cols-3 lg:gap-y-12 xl:gap-y-16">
         <div>
           <GlobalSearch
             variant="Bulk"
-            className="mx-auto h-12 w-12 text-wd-service md:h-20 md:w-20 xl:h-24 xl:w-24"
+            className="mx-auto h-12 w-12 text-wd-service md:h-20 md:w-20"
           />
           <div className="text-center">
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
@@ -32,7 +32,7 @@ function features() {
         <div>
           <Profile2User
             variant="Bulk"
-            className="mx-auto h-12 w-12 text-wd-service md:h-20 md:w-20 xl:h-24 xl:w-24"
+            className="mx-auto h-12 w-12 text-wd-service md:h-20 md:w-20"
           />
           <div className="text-center">
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
@@ -47,7 +47,7 @@ function features() {
         <div>
           <KeyboardOpen
             variant="Bulk"
-            className="mx-auto h-12 w-12 text-wd-service md:h-20 md:w-20 xl:h-24 xl:w-24"
+            className="mx-auto h-12 w-12 text-wd-service md:h-20 md:w-20"
           />
           <div className="text-center">
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
@@ -62,7 +62,7 @@ function features() {
         <div>
           <FolderOpen
             variant="Bulk"
-            className="mx-auto h-12 w-12 text-wd-service md:h-20 md:w-20 xl:h-24 xl:w-24"
+            className="mx-auto h-12 w-12 text-wd-service md:h-20 md:w-20"
           />
           <div className="text-center">
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
@@ -77,7 +77,7 @@ function features() {
         <div>
           <PenTool2
             variant="Bulk"
-            className="mx-auto h-12 w-12 text-wd-service md:h-20 md:w-20 xl:h-24 xl:w-24"
+            className="mx-auto h-12 w-12 text-wd-service md:h-20 md:w-20"
           />
           <div className="text-center">
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">

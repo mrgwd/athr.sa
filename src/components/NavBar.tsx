@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowDown2 } from "iconsax-react";
 function NavBar() {
   return (
-    <nav className="container mx-auto flex items-center justify-between px-8 py-5">
+    <nav className="container mx-auto flex items-center justify-between px-8 pb-5 pt-8">
       <div className="flex items-center sm:gap-12 md:gap-20">
         <img
           src="src/assets/images/ATHR.png"
@@ -10,10 +10,14 @@ function NavBar() {
           className="w-16"
         />
         <ul className="hidden child:transition-all child-hover:text-main-color sm:flex sm:gap-6 md:gap-10">
-          <Link to="/">الرئيسية</Link>
-          <Link to="/services">
-            خدماتنا <ArrowDown2 variant="Bold" className="inline-block w-4" />
-          </Link>
+          <li>
+            <Link to="/">الرئيسية</Link>
+          </li>
+          <li>
+            <Link to="/services">
+              خدماتنا <ArrowDown2 variant="Bold" className="inline-block w-4" />
+            </Link>
+          </li>
           <li>
             <a href="">أعمالنا</a>
           </li>
