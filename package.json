@@ -1,8 +1,8 @@
 {
+  "homepage": "https://muhamad-ramadan.github.io/athr.sa",
   "name": "athr.sa",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://muhamad-ramadan.github.io/athr.sa",
   "type": "module",
   "scripts": {
     "dev": "vite",
