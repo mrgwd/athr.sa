@@ -4,6 +4,7 @@ import Home from "../components/Home";
 import ServicesSection from "../components/ServicesSection";
 import Features from "../components/Features";
 import HowWeWork from "../components/HowWeWork";
+import Contact from "../components/Contact";
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
       <Experiences />
       <Features />
       <HowWeWork />
+      <Contact />
     </>
   );
 }

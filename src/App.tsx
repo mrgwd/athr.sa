@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
-import Services from "./pages/Services";
+import Services from "./pages/DMservice";
 
 function App() {
   return (
