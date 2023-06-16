@@ -1,7 +1,7 @@
 function ContactForm() {
   return (
     <form
-      className="absolute top-1/2 flex w-[28rem] flex-col gap-3 rounded-[3rem] bg-white p-8 py-12 shadow-xl max-sm:w-full sm:px-12 sm:max-md:left-1/2 sm:max-md:-translate-x-1/2 md:top-1/2 md:mr-8 md:-translate-y-1/2 lg:mr-12 xl:mr-16 2xl:mr-32"
+      className="absolute top-1/2 flex w-[28rem] flex-col gap-3 rounded-[3rem] bg-white p-8 py-12 shadow-3xl max-sm:w-full sm:px-12 sm:max-md:left-1/2 sm:max-md:-translate-x-1/2 md:top-1/2 md:mr-8 md:-translate-y-1/2 lg:mr-12 xl:mr-16 2xl:mr-32"
       action=""
     >
       <h4 className="mb-4 text-center font-semibold text-main-color sm:text-xl">

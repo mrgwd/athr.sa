@@ -14,6 +14,7 @@ function Contact() {
           <iframe
             className="-z-10 w-full max-sm:rounded-3xl md:h-[26rem]"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20515.698651988758!2d46.733962165249736!3d24.634111918293375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f05b8dec0cf19%3A0x2ecf2cc954b12e2a!2sAlmarqab%2C%20Riyadh%20Saudi%20Arabia!5e0!3m2!1sen!2seg!4v1686847290339!5m2!1sen!2seg"
+            title="ATHRLocatin"
             width="800"
             height="600"
             allowFullScreen={false}

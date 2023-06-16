@@ -24,6 +24,10 @@ export default {
         "wd-service": "#1F7364",
         "ma-service": "#163D36",
       },
+      boxShadow: {
+        "3xl":
+          "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 0px 60px -15px rgb(0 0 0 / 0.1)",
+      },
     },
     fontFamily: {
       ReadexPro: ["Readex Pro"],

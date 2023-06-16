@@ -5,6 +5,7 @@ import ServicesSection from "../components/ServicesSection";
 import Features from "../components/Features";
 import HowWeWork from "../components/HowWeWork";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 function HomePage() {
   return (
@@ -16,6 +17,7 @@ function HomePage() {
       <Features />
       <HowWeWork />
       <Contact />
+      <Footer />
     </>
   );
 }
