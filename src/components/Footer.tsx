@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from "iconsax-react";
+import { Instagram } from "iconsax-react";
 
 function Footer() {
   return (

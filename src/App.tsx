@@ -7,7 +7,7 @@ import MAservice from "./pages/MAservice";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import SideMenu from "./components/SideMenu";
-import { RefObject, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [menuside, setMenuside] = useState<HTMLDivElement | null>(null);

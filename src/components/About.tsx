@@ -13,7 +13,7 @@ function About() {
         عنــا
       </h2>
       <div className="flex flex-col-reverse items-center lg:flex-row lg:justify-center lg:gap-8">
-        <div className="">
+        <div>
           <svg
             className="w-80 md:w-[26rem] 2xl:w-[36rem]"
             width="490"
