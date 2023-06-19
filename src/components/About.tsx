@@ -1,6 +1,14 @@
+import { useRef } from "react";
+import useAnimation from "../hooks/useAnimation";
+
 function About() {
+  const aSection = useRef<HTMLDivElement | null>(null);
+  useAnimation(aSection, 500, "opacity-0", "translate-y-20");
   return (
-    <div className="container mx-auto my-24 px-4 md:mt-44">
+    <div
+      ref={aSection}
+      className="container mx-auto my-24 translate-y-20 px-4 opacity-0 transition duration-500 md:mt-44"
+    >
       <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-20 lg:text-2xl">
         عنــا
       </h2>

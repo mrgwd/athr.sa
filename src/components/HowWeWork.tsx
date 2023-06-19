@@ -1,71 +1,98 @@
+import { useRef } from "react";
+import useAnimation from "../hooks/useAnimation";
+
 function HowWeWork() {
+  const step1 = useRef<HTMLDivElement | null>(null);
+  const step2 = useRef<HTMLDivElement | null>(null);
+  const step3 = useRef<HTMLDivElement | null>(null);
+  const step4 = useRef<HTMLDivElement | null>(null);
+  useAnimation(step1, 600, "opacity-0", "translate-y-20");
+  useAnimation(step2, 600, "opacity-0", "translate-x-8");
+  useAnimation(step3, 600, "opacity-0", "-translate-x-8");
+  useAnimation(step4, 800, "opacity-0", "translate-y-12");
   return (
     <div className="container mx-auto my-24 px-4 md:mt-44">
       <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-20 lg:text-2xl">
         كيف نعمل؟
       </h2>
       <div>
-        <div className="relative hidden md:block">
-          <div className="absolute right-1/2 top-0 mr-20 child:text-wd-service">
-            <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-              دراسة وتحليل الأعمال
-            </h4>
-            <p className="text-xs lg:text-[0.78rem] xl:text-base">
-              ● دراسة الوضع الحالــــي للعلامـــــة التجاريـــــة <br />
-              ● دراسة وضع المحتوى والسوشيال ميديا <br />
-              ● تحلــــيـــــــــــــــــــــل
-              المـــوقــــــــــــــــــــــــــع
-              الإلـكـــترونــــــــــــــــــــــــي <br />●
-              تحلــــيـــــــــــــــــــــل
-              المنـــــــــــــــافسيــــــــــــــــــن بالســــــــــــــــوق{" "}
-              <br />
-            </p>
+        <div className="hidden md:block">
+          <div
+            ref={step1}
+            className="relative translate-y-20 opacity-0 transition duration-500 child:text-wd-service"
+          >
+            <div className="absolute right-1/2 top-0 mr-20">
+              <h4 className=" font-semibold  lg:mb-2 lg:text-xl xl:text-2xl">
+                دراسة وتحليل الأعمال
+              </h4>
+              <p className="text-xs lg:text-[0.78rem] xl:text-base">
+                ● دراسة الوضع الحالــــي للعلامـــــة التجاريـــــة <br />
+                ● دراسة وضع المحتوى والسوشيال ميديا <br />
+                ● تحلــــيـــــــــــــــــــــل
+                المـــوقــــــــــــــــــــــــــع
+                الإلـكـــترونــــــــــــــــــــــــي <br />●
+                تحلــــيـــــــــــــــــــــل
+                المنـــــــــــــــافسيــــــــــــــــــن
+                بالســــــــــــــــوق <br />
+              </p>
+            </div>
           </div>
           <div
-            className="absolute left-3/4 top-1/4 mt-16 child:text-wd-service"
+            ref={step2}
+            className="relative top-48 translate-x-8 opacity-0 transition duration-500 child:text-wd-service xl:top-56"
             dir="ltr"
           >
-            <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-              بناء استراتيجية تسويقية
-            </h4>
-            <p className="text-xs lg:text-[0.78rem] xl:text-base">
-              ● استراتيجية عمــــل بتوقيتـــــــات محددة
-              <br />● أهــــــداف محـــددة قابلــــــــــــة
-              للقيـــــــــــــــــــاس <br />
-              ● خطـــــــة تسويقية واضحـــــــــــة ودقيقـــــــــة <br />●
-              توزيع مناسب للتكلفة على المنصات <br />
-            </p>
-          </div>
-          <div className="absolute right-3/4 top-1/2 mt-16 child:text-wd-service">
-            <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-              التنفيذ والمراقبة
-            </h4>
-            <p className="text-xs lg:text-[0.78rem] xl:text-base">
-              ● توزيع المهــــــام للفــــــــرق المختصــــــــــة <br />
-              ● تنفيذ خــــــــــطة التســـــويق والإعلانات <br />
-              ● مراقبـــــــــة الحــــــــــــــــملات
-              ونتــــــــــــــــــــائجها
-              <br />
-              ● مراقبة وسائل التواصل الاجتماعي
-              <br />
-              ● تحسيــــــــــــن الحمـــــــــــــلات
-              الإعـــــــــــــــــــــلانية
-              <br />
-            </p>
+            <div className="absolute left-3/4 top-1/4 mt-16">
+              <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
+                بناء استراتيجية تسويقية
+              </h4>
+              <p className="text-xs lg:text-[0.78rem] xl:text-base">
+                ● استراتيجية عمــــل بتوقيتـــــــات محددة
+                <br />● أهــــــداف محـــددة قابلــــــــــــة
+                للقيـــــــــــــــــــاس <br />
+                ● خطـــــــة تسويقية واضحـــــــــــة ودقيقـــــــــة <br />●
+                توزيع مناسب للتكلفة على المنصات <br />
+              </p>
+            </div>
           </div>
           <div
-            className="absolute bottom-0 left-1/2 ml-20 mt-16 child:text-wd-service"
+            ref={step3}
+            className="relative top-80 -translate-x-8 opacity-0 transition duration-500 child:text-wd-service xl:top-[26rem]"
+          >
+            <div className="absolute right-3/4 top-1/2 mt-16">
+              <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
+                التنفيذ والمراقبة
+              </h4>
+              <p className="text-xs lg:text-[0.78rem] xl:text-base">
+                ● توزيع المهــــــام للفــــــــرق المختصــــــــــة <br />
+                ● تنفيذ خــــــــــطة التســـــويق والإعلانات <br />
+                ● مراقبـــــــــة الحــــــــــــــــملات
+                ونتــــــــــــــــــــائجها
+                <br />
+                ● مراقبة وسائل التواصل الاجتماعي
+                <br />
+                ● تحسيــــــــــــن الحمـــــــــــــلات
+                الإعـــــــــــــــــــــلانية
+                <br />
+              </p>
+            </div>
+          </div>
+          <div
+            ref={step4}
+            className="relative top-[48rem] translate-y-12 opacity-0 transition duration-500 child:text-wd-service xl:top-[60rem]"
             dir="ltr"
           >
-            <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-              قياس النتائج
-            </h4>
-            <p className="text-xs lg:text-[0.78rem] xl:text-base">
-              ● قياس نتائـــــــــج الحملات الإعلانيـــــــة <br />
-              ● تقرير مواقع التواصل الاجتماعــي <br />
-              ● نتائج زيارات الموقـــع الالكترونــــــي <br />● قياس النتائج
-              بالخطة التسويقية <br />
-            </p>
+            <div className="absolute bottom-0 left-1/2 ml-20 mt-16">
+              <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
+                قياس النتائج
+              </h4>
+              <p className="text-xs lg:text-[0.78rem] xl:text-base">
+                ● قياس نتائـــــــــج الحملات الإعلانيـــــــة <br />
+                ● تقرير مواقع التواصل الاجتماعــي <br />
+                ● نتائج زيارات الموقـــع الالكترونــــــي <br />● قياس النتائج
+                بالخطة التسويقية <br />
+              </p>
+            </div>
           </div>
           <svg
             className="mx-auto h-[44rem] xl:h-[56rem]"

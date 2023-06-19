@@ -1,13 +1,13 @@
-function MAservice() {
+function WDservice() {
   return (
     <div className="container mx-auto my-24 px-4">
-      <div className="text-ma-service">
+      <div className="text-wd-service">
         <h2 className="mb-8 text-center text-2xl font-semibold md:mb-10 lg:text-4xl">
-          تطبيقات الجوال
+          تطوير مواقع الويب
         </h2>
         <p className="mx-auto max-w-xl text-center font-normal">
-          نضمن لك حصولك على أفضل تطبيق مُصمم بكفاءة عالية تحت أيدي خبراء في مجال
-          تصميم تطبيقات الجوال والهواتف.
+          تطوير مواقع ويب إحترافية متوافقة مع الهواتف الذكية مع بريد إلكتروني
+          خاص وإستضافة مع حماية لموقعك لمدة سنة.
         </p>
       </div>
       <div className="mt-16 grid grid-cols-2 items-center justify-items-center gap-y-12 child:w-24 child:cursor-pointer child:opacity-60 child:grayscale child:transition-all child-hover:opacity-100 child-hover:grayscale-0 md:grid-cols-3 lg:grid-cols-4 lg:gap-y-20 lg:child:w-32">
@@ -27,4 +27,4 @@ function MAservice() {
     </div>
   );
 }
-export default MAservice;
+export default WDservice;

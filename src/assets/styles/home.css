@@ -1,0 +1,3 @@
+.group:hover + .drop-menu-container {
+  overflow: visible;
+}

@@ -1,7 +1,11 @@
 import { RefObject, useRef } from "react";
 
 import { ArrowLeft2, ArrowRight2 } from "iconsax-react";
+import useAnimation from "../hooks/useAnimation";
 function Experiences() {
+  const eSection = useRef<HTMLDivElement | null>(null);
+  useAnimation(eSection, 500, "opacity-0", "translate-y-12");
+
   const leftArrow: RefObject<SVGSVGElement> = useRef(null);
   const slider: RefObject<HTMLDivElement> = useRef(null);
   const rightArrow: RefObject<SVGSVGElement> = useRef(null);
@@ -13,7 +17,11 @@ function Experiences() {
     slider.current && (slider.current.scrollLeft -= 400);
   };
   return (
-    <div className="container mx-auto my-24 px-4 md:mt-44">
+    <div
+      ref={eSection}
+      className="container mx-auto my-24 translate-y-12 px-4 opacity-0 transition duration-500 md:mt-44"
+      id="experiences"
+    >
       <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-20 lg:text-2xl">
         مواقع تم إنشائها بواسطة أثر
       </h2>
@@ -35,25 +43,21 @@ function Experiences() {
         <div
           ref={slider}
           data-slider
-          className="scrollbar-hide relative mx-auto flex h-20 w-full items-center gap-3 overflow-scroll scroll-smooth child:w-24 child:cursor-pointer sm:gap-6 md:w-3/4 md:gap-9 lg:gap-12"
+          className="scrollbar-hide relative mx-auto flex h-20 w-full items-center gap-3 overflow-scroll scroll-smooth child:max-h-20 child:w-24 child:cursor-pointer child:opacity-60 child:grayscale child:transition-all child-hover:opacity-100 child-hover:grayscale-0 sm:gap-6 md:w-3/4 md:gap-9 lg:gap-12"
         >
-          <img src="src/assets/images/logo5.png" alt="fdec" />
-          <img src="src/assets/images/logo4.png" alt="wissam" />
-          <img src="src/assets/images/logo5.png" alt="fdec" />
-          <img src="src/assets/images/logo4.png" alt="wissam" />
-          <img src="src/assets/images/logo5.png" alt="fdec" />
-          <img src="src/assets/images/logo4.png" alt="wissam" />
-          <img src="src/assets/images/logo5.png" alt="fdec" />
-          <img src="src/assets/images/logo4.png" alt="wissam" />
-          <img src="src/assets/images/logo5.png" alt="fdec" />
-          <img src="src/assets/images/logo4.png" alt="wissam" />
-          <img src="src/assets/images/logo5.png" alt="fdec" />
-          <img src="src/assets/images/logo4.png" alt="wissam" />
-          <img src="src/assets/images/logo5.png" alt="fdec" />
-          <img src="src/assets/images/logo4.png" alt="wissam" />
-          <img src="src/assets/images/logo5.png" alt="fdec" />
-          <img src="src/assets/images/logo4.png" alt="wissam" />
-          <img src="src/assets/images/logo5.png" alt="fdec" />
+          <img src="src/assets/images/logo5.png" loading="lazy" alt="logo5" />
+          <img src="src/assets/images/logo4.png" loading="lazy" alt="logo4" />
+          <img src="src/assets/images/logo1.png" loading="lazy" alt="logo1" />
+          <img src="src/assets/images/logo2.png" loading="lazy" alt="logo1" />
+          <img src="src/assets/images/logo5.png" loading="lazy" alt="logo5" />
+          <img src="src/assets/images/logo4.png" loading="lazy" alt="logo4" />
+          <img src="src/assets/images/logo1.png" loading="lazy" alt="logo1" />
+          <img src="src/assets/images/logo2.png" loading="lazy" alt="logo1" />
+          <img src="src/assets/images/logo5.png" loading="lazy" alt="logo5" />
+          <img src="src/assets/images/logo4.png" loading="lazy" alt="logo4" />
+          <img src="src/assets/images/logo1.png" loading="lazy" alt="logo1" />
+          <img src="src/assets/images/logo2.png" loading="lazy" alt="logo1" />
+          <img src="src/assets/images/logo5.png" loading="lazy" alt="logo5" />
         </div>
       </div>
     </div>

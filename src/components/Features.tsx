@@ -6,10 +6,18 @@ import {
   PenTool2,
   Profile2User,
 } from "iconsax-react";
+import useAnimation from "../hooks/useAnimation";
+import { useRef } from "react";
 
-function features() {
+function Features() {
+  const fSection = useRef<HTMLDivElement | null>(null);
+  useAnimation(fSection, 500, "opacity-0", "translate-y-20");
+
   return (
-    <div className="container mx-auto my-24 px-4 md:mt-44">
+    <div
+      ref={fSection}
+      className="container mx-auto my-24 translate-y-20 px-4 opacity-0 transition duration-500 md:mt-44"
+    >
       <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-20 lg:text-2xl">
         كلٌ في مكان واحد
       </h2>
@@ -108,4 +116,4 @@ function features() {
     </div>
   );
 }
-export default features;
+export default Features;

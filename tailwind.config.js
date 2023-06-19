@@ -22,7 +22,7 @@ export default {
         "main-dark": "#273A3F",
         "dm-service": "#4552C4",
         "wd-service": "#1F7364",
-        "ma-service": "#163D36",
+        "ma-service": "#AE5726",
       },
       boxShadow: {
         "3xl":
