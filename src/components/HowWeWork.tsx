@@ -164,9 +164,9 @@ function HowWeWork() {
 
         <div className="relative md:hidden">
           <div className="absolute right-1/4 top-0 mb-6 mr-4 child:text-wd-service sm:mr-12">
-            <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
+            <h5 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
               دراسة وتحليل الأعمال
-            </h4>
+            </h5>
             <p className="text-xs lg:text-[0.78rem] xl:text-base">
               ● دراسة الوضع الحالــــي للعلامـــــة التجاريـــــة <br />
               ● دراسة وضع المحتوى والسوشيال ميديا <br />
@@ -182,9 +182,9 @@ function HowWeWork() {
             className="absolute left-1/4 top-1/4 ml-4 child:text-wd-service sm:ml-12 sm:mt-6"
             dir="ltr"
           >
-            <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
+            <h5 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
               بناء استراتيجية تسويقية
-            </h4>
+            </h5>
             <p className="text-xs lg:text-[0.78rem] xl:text-base">
               ● استراتيجية عمــــل بتوقيتـــــــات محددة
               <br />● أهــــــداف محـــددة قابلــــــــــــة
@@ -194,9 +194,9 @@ function HowWeWork() {
             </p>
           </div>
           <div className="absolute left-1/4 top-1/2 -ml-4 mt-12 child:text-wd-service sm:left-0 sm:right-1/3 sm:-ml-0 sm:mt-16">
-            <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
+            <h5 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
               التنفيذ والمراقبة
-            </h4>
+            </h5>
             <p className="text-xs lg:text-[0.78rem] xl:text-base">
               ● توزيع المهــــــام للفــــــــرق المختصــــــــــة <br />
               ● تنفيذ خــــــــــطة التســـــويق والإعلانات <br />
@@ -214,9 +214,9 @@ function HowWeWork() {
             className="absolute right-1/4 top-3/4 mt-20 child:text-wd-service sm:right-1/3 sm:mt-24"
             dir="ltr"
           >
-            <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
+            <h5 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
               قياس النتائج
-            </h4>
+            </h5>
             <p className="text-xs lg:text-[0.78rem] xl:text-base">
               ● قياس نتائـــــــــج الحملات الإعلانيـــــــة <br />
               ● تقرير مواقع التواصل الاجتماعــي <br />

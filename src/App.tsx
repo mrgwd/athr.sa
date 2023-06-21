@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import SideMenu from "./components/SideMenu";
 import { useState } from "react";
+import FloatingContactButton from "./components/FloatingContactButton";
 
 function App() {
   const [menuside, setMenuside] = useState<HTMLDivElement | null>(null);
@@ -26,6 +27,7 @@ function App() {
         <Route path="/WDservices" element={<WDservice />} />
         <Route path="/MAservices" element={<MAservice />} />
       </Routes>
+      <FloatingContactButton />
       <Contact />
       <Footer />
     </>

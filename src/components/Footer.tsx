@@ -29,7 +29,7 @@ function Footer() {
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#">
             <svg
               className="mt-0.5"
               width="20"
