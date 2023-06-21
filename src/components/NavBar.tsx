@@ -1,16 +1,12 @@
 import { RefObject, useRef } from "react";
-
 import { Link } from "react-router-dom";
 import { ArrowDown2 } from "iconsax-react";
 import DropMenu from "./DropMenu";
+import logo from "../assets/images/logo/ATHR.png";
 interface Props {
   menuside: any;
 }
 function NavBar(menu: Props) {
-  // useEffect(() => {
-  //   !(location.pathname === "/") &&
-  //     menuBtn.current?.classList.remove("lg:child:bg-white");
-  // }, [location]);
   const menuBtn: RefObject<HTMLDivElement> = useRef(null);
   const menuDown = () => {
     menu.menuside.classList.toggle("-top-full");
@@ -32,11 +28,7 @@ function NavBar(menu: Props) {
   return (
     <nav className="container mx-auto flex items-center justify-between px-8 pb-5 pt-8">
       <div className="flex items-center sm:gap-12 md:gap-20">
-        <img
-          src="src/assets/images/ATHR.png"
-          alt="ATHR.sa Logo"
-          className="w-16"
-        />
+        <img src={logo} alt="ATHR.sa Logo" className="w-16" />
         <ul className="hidden child:transition-all sm:flex sm:gap-6 md:gap-10">
           <li className="hover:text-main-color">
             <Link to="/">الرئيسية</Link>

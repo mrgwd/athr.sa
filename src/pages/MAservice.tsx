@@ -1,3 +1,7 @@
+import client1 from "../assets/images/Clients/logo1.png";
+import client2 from "../assets/images/Clients/logo2.png";
+import client3 from "../assets/images/Clients/logo3.png";
+import client4 from "../assets/images/Clients/logo4.png";
 function MAservice() {
   return (
     <div className="container mx-auto my-24 px-4">
@@ -12,16 +16,16 @@ function MAservice() {
       </div>
       <div className="mt-16 grid grid-cols-2 items-center justify-items-center gap-y-12 child:w-24 child:cursor-pointer child:opacity-60 child:grayscale child:transition-all child-hover:opacity-100 child-hover:grayscale-0 md:grid-cols-3 lg:grid-cols-4 lg:gap-y-20 lg:child:w-32">
         <a href="https://fdec-sa.com" target="_blanck">
-          <img src="src/assets/images/logo5.png" loading="lazy" alt="logo5" />
+          <img src={client1} loading="lazy" alt="logo1" />
         </a>
         <a href="https://alwissamlaw.com" target="_blanck">
-          <img src="src/assets/images/logo4.png" loading="lazy" alt="logo4" />
+          <img src={client2} loading="lazy" alt="logo2" />
         </a>
         <a href="https://shoofeldonia.com" target="_blanck">
-          <img src="src/assets/images/logo1.png" loading="lazy" alt="logo1" />
+          <img src={client3} loading="lazy" alt="logo3" />
         </a>
         <a href="https://shoofeldonia.com" target="_blanck">
-          <img src="src/assets/images/logo2.png" loading="lazy" alt="logo1" />
+          <img src={client4} loading="lazy" alt="logo4" />
         </a>
       </div>
     </div>

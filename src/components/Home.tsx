@@ -1,9 +1,10 @@
+import homeImage from "../assets/images/others/home.png";
 function Home() {
   return (
     <main className="container mx-auto items-center justify-between px-4 md:max-lg:flex">
       <div className="relative sm:hidden">
         <img
-          src="src/assets/images/home.png"
+          src={homeImage}
           alt="home"
           className="absolute left-1/2 top-1/2 w-64 -translate-x-1/2 -translate-y-1/2"
         />
@@ -37,7 +38,7 @@ function Home() {
 
       <div className="absolute left-0 top-0 -z-10 hidden lg:max-xl:block">
         <img
-          src="src/assets/images/home.png"
+          src={homeImage}
           alt="home"
           className="absolute left-1/2 top-1/2 w-80 -translate-x-1/3 -translate-y-1/3"
         />
@@ -72,7 +73,7 @@ function Home() {
 
       <div className="absolute left-0 top-0 -z-10 hidden xl:block">
         <img
-          src="src/assets/images/home.png"
+          src={homeImage}
           alt="home"
           className="absolute left-1/2 top-1/2 w-96 -translate-x-1/3 -translate-y-1/3"
         />
@@ -120,7 +121,7 @@ function Home() {
       </div>
       <div className="relative hidden md:max-lg:inline-block">
         <img
-          src="src/assets/images/home.png"
+          src={homeImage}
           alt="home"
           className="absolute left-1/2 top-1/2 w-64 -translate-x-1/2 -translate-y-1/2"
         />
