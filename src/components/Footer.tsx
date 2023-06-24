@@ -3,7 +3,10 @@ import { Instagram } from "iconsax-react";
 function Footer() {
   return (
     <footer className="w-full bg-main-color pb-10 pt-12 text-center text-white">
-      <p>جميع الحقوق محفوظة © 2023 - أثر</p>
+      <p>
+        جميع الحقوق محفوظة © 2023 - أثر <br />{" "}
+        <span className="text-sm text-white/50">السجل التجاري: 2511020210</span>{" "}
+      </p>
       <ul className="mt-4 flex justify-center gap-4">
         <li>
           <a href="https://instagram.com/athr_sa.company?igshid=ZGUzMzM3NWJiOQ==">

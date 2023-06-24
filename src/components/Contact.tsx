@@ -41,8 +41,8 @@ function Contact() {
           <div className="inline-block">
             <h5 className="text-lg font-semibold text-wd-service">العنوان</h5>
             <p className="text-main-color">
-              المملكة العربية السعودية
-              <span className="block text-wd-service">منطقة مجناح المرقب</span>
+              حفر الباطن - حي العزيزية
+              <span className="block text-wd-service">المجمعة - حي المرقب</span>
             </p>
           </div>
         </div>
@@ -71,7 +71,7 @@ function Contact() {
               البريد الإلكتروني
             </h5>
             <p className="text-main-color">
-              support@atrh.com
+              Info@athr-sa.com
               <span className="block text-wd-service">دعم 24 × 7</span>
             </p>
           </div>
