@@ -55,7 +55,7 @@ function Contact() {
               رقم الهاتف
             </h5>
             <p className="text-main-color" dir="ltr">
-              +966 059 505 7050
+              +966 506 354 147
               <span className="block text-wd-service" dir="rtl">
                 9:00ص - 6:00م
               </span>

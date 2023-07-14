@@ -1,4 +1,4 @@
-import { Instagram } from "iconsax-react";
+import { Instagram, Snapchat, Facebook } from "iconsax-react";
 
 function Footer() {
   return (
@@ -11,6 +11,16 @@ function Footer() {
         <li>
           <a href="https://instagram.com/athr_sa.company?igshid=ZGUzMzM3NWJiOQ==">
             <Instagram variant="Bold" />
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/athr_sa.company?igshid=ZGUzMzM3NWJiOQ==">
+            <Facebook variant="Bold" />
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/athr_sa.company?igshid=ZGUzMzM3NWJiOQ==">
+            <Snapchat variant="Bold" />
           </a>
         </li>
         <li>
