@@ -1,4 +1,4 @@
-import { useForm } from "@formspree/react";
+import { useForm, ValidationError } from "@formspree/react";
 function ContactForm() {
   const [state, handleSubmit] = useForm("xqkvkody");
   return (
@@ -50,6 +50,7 @@ function ContactForm() {
             >
               الإسم الكامل
             </label>
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
           <div className="group relative z-0 w-full">
             <input
@@ -66,22 +67,32 @@ function ContactForm() {
             >
               البريد الإلكتروني
             </label>
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
           </div>
           <div className="group relative z-0 w-full">
             <input
-              type="text"
-              name="subject"
-              id="subject"
+              type="tel"
+              name="tel-number"
+              id="tel-number"
               className="peer block w-full appearance-none rounded-full border border-gray-200 bg-gray-50 px-6 py-3 text-sm text-gray-900 focus:border-main-color focus:outline-none focus:ring-0"
               placeholder=" "
               required
             />
             <label
-              htmlFor="subject"
+              htmlFor="tel-number"
               className="absolute right-5 top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0"
             >
-              الموضوع
+              رقم الجوال
             </label>
+            <ValidationError
+              prefix="Tel-number"
+              field="tel-number"
+              errors={state.errors}
+            />
           </div>
           <div className="group relative z-0 w-full">
             <textarea
@@ -99,6 +110,11 @@ function ContactForm() {
             >
               التفاصيل
             </label>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
           </div>
           <button
             type="submit"
