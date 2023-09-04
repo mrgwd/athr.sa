@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import useAnimation from "../hooks/useAnimation";
 
 function HowWeWork() {
@@ -6,6 +7,7 @@ function HowWeWork() {
   const step2 = useRef<HTMLDivElement | null>(null);
   const step3 = useRef<HTMLDivElement | null>(null);
   const step4 = useRef<HTMLDivElement | null>(null);
+  const { t } = useTranslation();
   useAnimation(step1, 600, "opacity-0", "translate-y-20");
   useAnimation(step2, 600, "opacity-0", "translate-x-8");
   useAnimation(step3, 600, "opacity-0", "-translate-x-8");
@@ -13,7 +15,7 @@ function HowWeWork() {
   return (
     <div className="container mx-auto my-24 px-4 md:mt-44">
       <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-20 lg:text-2xl">
-        كيف نعمل؟
+        {t("howWeWork.heading")}
       </h2>
       <div>
         <div className="hidden md:block">
@@ -23,17 +25,16 @@ function HowWeWork() {
           >
             <div className="absolute right-1/2 top-0 mr-20">
               <h4 className=" font-semibold  lg:mb-2 lg:text-xl xl:text-2xl">
-                دراسة وتحليل الأعمال
+                {t("howWeWork.step1.h1")}
               </h4>
               <p className="text-xs lg:text-[0.78rem] xl:text-base">
-                ● دراسة الوضع الحالــــي للعلامـــــة التجاريـــــة <br />
-                ● دراسة وضع المحتوى والسوشيال ميديا <br />
-                ● تحلــــيـــــــــــــــــــــل
-                المـــوقــــــــــــــــــــــــــع
-                الإلـكـــترونــــــــــــــــــــــــي <br />●
-                تحلــــيـــــــــــــــــــــل
-                المنـــــــــــــــافسيــــــــــــــــــن
-                بالســــــــــــــــوق <br />
+                {t("howWeWork.step1.p1")}
+                <br />
+                {t("howWeWork.step1.p2")}
+                <br />
+                {t("howWeWork.step1.p3")}
+                <br />
+                {t("howWeWork.step1.p4")}
               </p>
             </div>
           </div>
@@ -44,14 +45,16 @@ function HowWeWork() {
           >
             <div className="absolute left-3/4 top-1/4 mt-16">
               <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-                بناء استراتيجية تسويقية
+                {t("howWeWork.step2.h1")}
               </h4>
               <p className="text-xs lg:text-[0.78rem] xl:text-base">
-                ● استراتيجية عمــــل بتوقيتـــــــات محددة
-                <br />● أهــــــداف محـــددة قابلــــــــــــة
-                للقيـــــــــــــــــــاس <br />
-                ● خطـــــــة تسويقية واضحـــــــــــة ودقيقـــــــــة <br />●
-                توزيع مناسب للتكلفة على المنصات <br />
+                {t("howWeWork.step2.p1")}
+                <br />
+                {t("howWeWork.step2.p2")}
+                <br />
+                {t("howWeWork.step2.p3")}
+                <br />
+                {t("howWeWork.step2.p4")}
               </p>
             </div>
           </div>
@@ -61,19 +64,18 @@ function HowWeWork() {
           >
             <div className="absolute right-3/4 top-1/2 mt-16">
               <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-                التنفيذ والمراقبة
+                {t("howWeWork.step3.h1")}
               </h4>
               <p className="text-xs lg:text-[0.78rem] xl:text-base">
-                ● توزيع المهــــــام للفــــــــرق المختصــــــــــة <br />
-                ● تنفيذ خــــــــــطة التســـــويق والإعلانات <br />
-                ● مراقبـــــــــة الحــــــــــــــــملات
-                ونتــــــــــــــــــــائجها
+                {t("howWeWork.step3.p1")}
                 <br />
-                ● مراقبة وسائل التواصل الاجتماعي
+                {t("howWeWork.step3.p2")}
                 <br />
-                ● تحسيــــــــــــن الحمـــــــــــــلات
-                الإعـــــــــــــــــــــلانية
+                {t("howWeWork.step3.p3")}
                 <br />
+                {t("howWeWork.step3.p4")}
+                <br />
+                {t("howWeWork.step3.p5")}
               </p>
             </div>
           </div>
@@ -84,13 +86,16 @@ function HowWeWork() {
           >
             <div className="absolute bottom-0 left-1/2 ml-20 mt-16">
               <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-                قياس النتائج
+                {t("howWeWork.step4.h1")}
               </h4>
               <p className="text-xs lg:text-[0.78rem] xl:text-base">
-                ● قياس نتائـــــــــج الحملات الإعلانيـــــــة <br />
-                ● تقرير مواقع التواصل الاجتماعــي <br />
-                ● نتائج زيارات الموقـــع الالكترونــــــي <br />● قياس النتائج
-                بالخطة التسويقية <br />
+                {t("howWeWork.step4.p1")}
+                <br />
+                {t("howWeWork.step4.p2")}
+                <br />
+                {t("howWeWork.step4.p3")}
+                <br />
+                {t("howWeWork.step4.p4")}
               </p>
             </div>
           </div>
@@ -165,17 +170,16 @@ function HowWeWork() {
         <div className="relative md:hidden">
           <div className="absolute right-1/4 top-0 mb-6 mr-4 child:text-wd-service sm:mr-12">
             <h5 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-              دراسة وتحليل الأعمال
+              {t("howWeWork.step1.h1")}
             </h5>
             <p className="text-xs lg:text-[0.78rem] xl:text-base">
-              ● دراسة الوضع الحالــــي للعلامـــــة التجاريـــــة <br />
-              ● دراسة وضع المحتوى والسوشيال ميديا <br />
-              ● تحلــــيـــــــــــــــــــــل
-              المـــوقــــــــــــــــــــــــــع
-              الإلـكـــترونــــــــــــــــــــــــي <br />●
-              تحلــــيـــــــــــــــــــــل
-              المنـــــــــــــــافسيــــــــــــــــــن بالســــــــــــــــوق{" "}
+              {t("howWeWork.step1.p1")}
               <br />
+              {t("howWeWork.step1.p2")}
+              <br />
+              {t("howWeWork.step1.p3")}
+              <br />
+              {t("howWeWork.step1.p4")}
             </p>
           </div>
           <div
@@ -183,31 +187,32 @@ function HowWeWork() {
             dir="ltr"
           >
             <h5 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-              بناء استراتيجية تسويقية
+              {t("howWeWork.step2.h1")}
             </h5>
             <p className="text-xs lg:text-[0.78rem] xl:text-base">
-              ● استراتيجية عمــــل بتوقيتـــــــات محددة
-              <br />● أهــــــداف محـــددة قابلــــــــــــة
-              للقيـــــــــــــــــــاس <br />
-              ● خطـــــــة تسويقية واضحـــــــــــة ودقيقـــــــــة <br />●
-              توزيع مناسب للتكلفة على المنصات <br />
+              {t("howWeWork.step2.p1")}
+              <br />
+              {t("howWeWork.step2.p2")}
+              <br />
+              {t("howWeWork.step2.p3")}
+              <br />
+              {t("howWeWork.step2.p4")}
             </p>
           </div>
           <div className="absolute left-1/4 top-1/2 -ml-4 mt-12 child:text-wd-service sm:left-0 sm:right-1/3 sm:-ml-0 sm:mt-16">
             <h5 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-              التنفيذ والمراقبة
+              {t("howWeWork.step3.h1")}
             </h5>
             <p className="text-xs lg:text-[0.78rem] xl:text-base">
-              ● توزيع المهــــــام للفــــــــرق المختصــــــــــة <br />
-              ● تنفيذ خــــــــــطة التســـــويق والإعلانات <br />
-              ● مراقبـــــــــة الحــــــــــــــــملات
-              ونتــــــــــــــــــــائجها
+              {t("howWeWork.step3.p1")}
               <br />
-              ● مراقبة وسائل التواصل الاجتماعي
+              {t("howWeWork.step3.p2")}
               <br />
-              ● تحسيــــــــــــن الحمـــــــــــــلات
-              الإعـــــــــــــــــــــلانية
+              {t("howWeWork.step3.p3")}
               <br />
+              {t("howWeWork.step3.p4")}
+              <br />
+              {t("howWeWork.step3.p5")}
             </p>
           </div>
           <div
@@ -215,13 +220,16 @@ function HowWeWork() {
             dir="ltr"
           >
             <h5 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-              قياس النتائج
+              {t("howWeWork.step4.h1")}
             </h5>
             <p className="text-xs lg:text-[0.78rem] xl:text-base">
-              ● قياس نتائـــــــــج الحملات الإعلانيـــــــة <br />
-              ● تقرير مواقع التواصل الاجتماعــي <br />
-              ● نتائج زيارات الموقـــع الالكترونــــــي <br />● قياس النتائج
-              بالخطة التسويقية <br />
+              {t("howWeWork.step4.p1")}
+              <br />
+              {t("howWeWork.step4.p2")}
+              <br />
+              {t("howWeWork.step4.p3")}
+              <br />
+              {t("howWeWork.step4.p4")}
             </p>
           </div>
           <svg

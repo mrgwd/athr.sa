@@ -8,9 +8,11 @@ import {
 } from "iconsax-react";
 import useAnimation from "../hooks/useAnimation";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 function Features() {
   const fSection = useRef<HTMLDivElement | null>(null);
+  const { t } = useTranslation();
   useAnimation(fSection, 500, "opacity-0", "translate-y-20");
 
   return (
@@ -19,7 +21,7 @@ function Features() {
       className="container mx-auto my-24 translate-y-20 px-4 opacity-0 transition duration-500 md:mt-44"
     >
       <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-20 lg:text-2xl">
-        كلٌ في مكان واحد
+        {t("features.heading")}
       </h2>
       <div className="grid grid-cols-2 justify-items-center gap-x-4 gap-y-8 md:grid-cols-3 lg:gap-y-12 xl:gap-y-16">
         <div>
@@ -29,11 +31,10 @@ function Features() {
           />
           <div className="text-center">
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
-              تحسين محركات البحث
+              {t("features.seOptmization.subHeading")}
             </h4>
             <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
-              كشركة تصميم مواقع نقدم خدمة كتابة المحتوى الالكتروني الاحترافية
-              كواحدة من احدى وسائل التسويق غير المباشر.
+              {t("features.seOptmization.caption")}
             </p>
           </div>
         </div>
@@ -44,11 +45,10 @@ function Features() {
           />
           <div className="text-center">
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
-              إدارة حسابات التواصل الاجتماعي
+              {t("features.manageAccounts.subHeading")}
             </h4>
             <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
-              تفخر شركة أثر بتقديم خدمة اداراة حسابات التواصل الاجتماعي بالاضافة
-              الى نشاطها الاساسي وهى شركة تصميم مواقع.
+              {t("features.manageAccounts.caption")}
             </p>
           </div>
         </div>
@@ -59,11 +59,10 @@ function Features() {
           />
           <div className="text-center">
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
-              إدارة الحملات الاعلانية المدفوعة
+              {t("features.manageSponsors.subHeading")}
             </h4>
             <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
-              تمتلك شركة أثر أفضل فريق في التسويق عبر الانترنت لادارة الحملات
-              الاعلانية وبذلك نضمن لك ادارة احترافية لحملتك.
+              {t("features.manageSponsors.caption")}
             </p>
           </div>
         </div>
@@ -74,11 +73,10 @@ function Features() {
           />
           <div className="text-center">
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
-              تصميم الهوية البصرية
+              {t("features.designIdentities.subHeading")}
             </h4>
             <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
-              تقدم شركة أثر لتصميم المواقع ايضا خدمة ارسال رسائل SMS . وهى واحدة
-              من أفضل وسائل الدعاية والاعلان.
+              {t("features.designIdentities.caption")}
             </p>
           </div>
         </div>
@@ -89,11 +87,10 @@ function Features() {
           />
           <div className="text-center">
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
-              التصميم الجرافيكي
+              {t("features.graphicDesign.subHeading")}
             </h4>
             <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
-              نقدم خدمة تصوير المنتجات للمتاجر والمواقع الالكترونية بهدف عرض
-              المحتوى في أفضل صورة الممكنة.
+              {t("features.graphicDesign.caption")}
             </p>
           </div>
         </div>
@@ -104,11 +101,10 @@ function Features() {
           />
           <div className="text-center">
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
-              كتابة المحتوى والمقالات
+              {t("features.writingContent.subHeading")}
             </h4>
             <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
-              نقدم خدمة كتابة المحتوى الالكتروني وهى تهدف الى انتشار موقعك على
-              محركات البحث ، زيادة عدد الزوار.
+              {t("features.writingContent.caption")}
             </p>
           </div>
         </div>

@@ -1,7 +1,11 @@
+import { useTranslation } from "react-i18next";
 import homeImage from "../assets/images/others/home.png";
+import i18next from "i18next";
+
 function Home() {
+  const { t } = useTranslation();
   return (
-    <main className="container mx-auto items-center justify-between px-4 md:max-lg:flex">
+    <main className="container mx-auto mt-32 items-center justify-between px-4 sm:mt-56 md:mt-40 md:max-lg:flex lg:mt-56 xl:mt-64">
       <div className="relative sm:hidden">
         <img
           src={homeImage}
@@ -36,7 +40,11 @@ function Home() {
         </svg>
       </div>
 
-      <div className="absolute left-0 top-0 -z-10 hidden lg:max-xl:block">
+      <div
+        className={`absolute top-0 ${
+          i18next.language === "en" ? "right-0 -scale-x-100" : "left-0"
+        } -z-10 hidden lg:max-xl:block`}
+      >
         <img
           src={homeImage}
           alt="home"
@@ -71,7 +79,11 @@ function Home() {
         </svg>
       </div>
 
-      <div className="absolute left-0 top-0 -z-10 hidden xl:block">
+      <div
+        className={`absolute top-0 ${
+          i18next.language === "en" ? "right-0 -scale-x-100" : "left-0"
+        } -z-10 hidden xl:block`}
+      >
         <img
           src={homeImage}
           alt="home"
@@ -106,17 +118,18 @@ function Home() {
       </div>
       <div className="mt-16 child:max-md:text-center sm:mt-36 md:max-lg:inline-block lg:max-xl:mt-20">
         <h1 className="mb-4 text-main-dark sm:text-xl sm:font-light md:text-2xl 2xl:text-3xl">
-          مع نظام إدارة المحتوى من<span className="text-main-med"> أثر</span>
+          {t("home.heading")}
+          <span className="text-main-med"> {t("home.athr")}</span>
         </h1>
         <p className="text-2xl font-semibold text-main-med sm:text-3xl sm:!leading-normal 2xl:text-4xl">
-          إرتقي بجمال موقعك الإلكتروني <br /> وأحصل على معدل ظهور أكبر <br /> في
-          نتائج البحث.
+          {t("home.paragraph1")} <br /> {t("home.paragraph2")} <br />{" "}
+          {t("home.paragraph3")}
         </p>
         <a
           className="text-md mt-10 block w-max rounded-full bg-gradient-to-r from-main-color to-main-blue-gradient px-6 py-2 text-white transition duration-300 hover:from-white hover:to-white hover:text-main-color hover:outline hover:outline-2 hover:outline-main-color max-md:mx-auto sm:px-10 sm:py-3 sm:text-lg"
           href="#contact"
         >
-          تواصل معنا
+          {t("home.mainButton")}
         </a>
       </div>
       <div className="relative hidden md:max-lg:inline-block">
@@ -152,11 +165,6 @@ function Home() {
             </linearGradient>
           </defs>
         </svg>
-      </div>
-      <div className="">
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
     </main>
   );

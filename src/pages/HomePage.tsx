@@ -10,9 +10,9 @@ function HomePage() {
   return (
     <>
       <Home />
-      <ServicesSection />
-      <About />
       <Experiences />
+      <About />
+      <ServicesSection />
       <Features />
       <HowWeWork />
     </>

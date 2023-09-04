@@ -37,6 +37,7 @@ export default {
     function ({ addVariant }) {
       addVariant("child", "& > *");
       addVariant("child-hover", "& > *:hover");
+      addVariant("not-last", "&:not(:last-child)");
     },
   ],
 };

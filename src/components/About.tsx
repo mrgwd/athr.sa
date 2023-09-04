@@ -1,16 +1,19 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import useAnimation from "../hooks/useAnimation";
 
 function About() {
   const aSection = useRef<HTMLDivElement | null>(null);
+  const { t } = useTranslation();
   useAnimation(aSection, 500, "opacity-0", "translate-y-20");
   return (
     <div
       ref={aSection}
-      className="container mx-auto my-24 translate-y-20 px-4 opacity-0 transition duration-500 md:mt-44"
+      className="container mx-auto my-24 translate-y-20 px-4 opacity-0 transition duration-500 md:mt-32"
+      id="about"
     >
       <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-20 lg:text-2xl">
-        عنــا
+        {t("about.heading")}
       </h2>
       <div className="flex flex-col-reverse items-center lg:flex-row lg:justify-center lg:gap-8">
         <div>
@@ -517,29 +520,10 @@ function About() {
         </div>
         <div className=" text-wd-service">
           <h3 className="mb-4 font-bold md:text-xl 2xl:text-2xl">
-            مؤسسة رائدة في صناعة البرمجيات <br /> والتسـويق الإلـكتروني فـــي
-            الشـرق الأوســط
+            {t("about.p1")}
           </h3>
-          <p className="text-xs sm:text-base 2xl:text-lg">
-            تهــــــــــدف إلــى مساعدة شركائنا المتميزين مــــــن
-            الجــــــــــــهات والمؤسسات والشـــــــركات فـــــــــــي
-            <br />
-            تحسيـــــــن ظهورهـــــــــم وقيادتهم إلــــى الريـــــــادة
-            عــــــبر حلول مبتكرة باستخدام أدوات عديـــــــــــدة
-            <br />
-            وأختيار أفضـــــل الأدوات للحصول علي أفضل النتائج. أهدافنا أن نساهم
-            في بناء المشاريع
-            <br />
-            الناشئة وتحويل الأفكار والأحلام الي منتجات ملموسة، نحسن ظهورك
-            بالانترنت ومواقــع
-            <br />
-            التواصـــــل الاجتماعي ونجعل الوصول اليك أسهل، نسـاعد فـــي التخطيط
-            لحملاتك واختيار
-            <br />
-            المنصــــات المناسبة والأدوات الأنــســب، ونطــــور منهجية عمـــــلك
-            ونكون شريـــكك الابــــــداعـي
-            <br />
-            ونســــاعدك فـــــي التقدم والإنجـــــاز.
+          <p className="lg:max-w-xlg text-justify text-xs sm:text-base 2xl:text-lg">
+            {t("about.p2")}
           </p>
         </div>
       </div>

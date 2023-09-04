@@ -1,0 +1,144 @@
+{ 
+  "nav":{
+    "home":"Home",
+    "whoAreWe":"Who are we?",
+    "profile":{
+      "h1":"Our Work",
+      "op1":"Online stores",
+      "op2":"Web development",
+      "op3":"Social media designs"
+    },
+    "contact":"Contact"
+  },
+  "home":{
+    "heading": "With management system from",
+    "athr": "ATHR",
+    "paragraph1": "improve the beauty of your",
+    "paragraph2": "website and get a higher rate",
+    "paragraph3": "of appearance in search results.",
+    "mainButton": "Contact"
+  },
+  "about":{
+    "heading": "Who are we?",
+    "p1": "A leading institution in the software and e-marketing industry in the Middle East",
+    "p2": "We aims to help our distinguished partners from the entities, institutions and companies improve their visibility and lead them to leadership through innovative solutions using many tools and choosing the best tools to obtain the best results. Our goals are to contribute to building emerging projects and transforming ideas and dreams into tangible products. We improve your visibility on the Internet and social networking sites and make it easier to reach you. We help plan your campaigns and choose the appropriate platforms and the most appropriate tools. We develop your work methodology and be your creative partner and help you in progress and achievement."
+  },
+  "services":{
+    "heading": "Services",
+    "onlineStores":{
+      "subHeading":"Online stores",
+      "caption":"Athr Company has the best team in Internet marketing to manage advertising campaigns, thus ensuring professional management of your campaign",
+      "readMore":"Read More"
+    },
+    "webDev":{
+      "subHeading":"Web development",
+      "caption":"Athr Company has the best team in Internet marketing to manage advertising campaigns, thus ensuring professional management of your campaign",
+      "readMore":"Read More"
+    },
+    "socialMediaDesigns":{
+      "subHeading":"Social media designs",
+      "caption":"Athr Company has the best team in Internet marketing to manage advertising campaigns, thus ensuring professional management of your campaign",
+      "readMore":"Read More"
+    }
+  },
+  "features":{
+    "heading":"All in one",
+    "seOptmization":{
+      "subHeading":"Search Engine Optimization",
+      "caption":"As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+    },
+    "manageAccounts":{
+      "subHeading":"Managing social media accounts",
+      "caption":"As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+    },
+    "manageSponsors":{
+      "subHeading":"Advertising campaign management",
+      "caption":"As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+    },
+    "designIdentities":{
+      "subHeading":"Visual identity design",
+      "caption":"As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+    },
+    "graphicDesign":{
+      "subHeading":"Graphic design",
+      "caption":"As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+    },
+    "writingContent":{
+      "subHeading":"Writing content and articles",
+      "caption":"As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+    }
+  }, "howWeWork":{
+    "heading":"How we work",
+    "step1":{
+      "h1":"Study and analysis",
+      "p1":"● Study the current status of the trademark",
+      "p2":"● Study the content",
+      "p3":"● Analyis the website",
+      "p4":"● Analysis of competitors in the market"
+    },
+    "step2":{
+      "h1":"Building a strategy",
+      "p1":"● A strategy with specific timings",
+      "p2":"● Specific, measurable goals",
+      "p3":"● A clear and precise marketing plan",
+      "p4":"● Appropriate cost distribution"
+    },
+    "step3":{
+      "h1":"Implementation",
+      "p1":"● Distributing tasks to specialized teams",
+      "p2":"● Implementing the marketing plan",
+      "p3":"● Monitoring campaigns and their results",
+      "p4":"● Social media monitoring",
+      "p5":"● Improving advertising campaigns"
+    },
+    "step4":{
+      "h1":"Measure results",
+      "p1":"● Measuring the results of advertising campaigns",
+      "p2":"● Social media report",
+      "p3":"● Results of website visits",
+      "p4":"● Measuring results with the marketing plan"
+    }
+  }, "contact":{
+    "heading":"Contact",
+    "form":{
+      "formHeading":"Get your consultation",
+      "fullName":"Full name",
+      "email":"Email address",
+      "phoneNumber":"Phone number",
+      "detailes":"Details",
+      "sendButton":"Send"
+    },
+    "supportInfo":{
+      "address":{
+        "heading":"Address",
+        "address1":"Hafar Al-Batin - Al-Azizia neighborhood",
+        "address2":"Majmaah - Al-Marqab District"
+      },
+      "phoneNumber":{
+        "heading":"Phone Number",
+        "phoneNumber":"+966 506 354 147",
+        "workTimes":"9:00AM - 6:00PM"
+      },
+      "emailAddress":{
+        "heading":"Email",
+        "emailAddress":"Info@athr-sa.com",
+        "support":"24 x 7 support"
+      }
+    }
+  },"footer":{
+    "heading":"All rights reserved © ATHR",
+    "commercialRegister":"Commercial register: 2511020210"
+  },
+  "OS":{
+    "heading":"Online Stores",
+    "describtion":"Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook."
+  },
+  "WD":{
+    "heading":"Web development",
+    "describtion":"Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook."
+  },
+  "SD":{
+    "heading":"Social media designs",
+    "describtion":"Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook."
+  }
+}

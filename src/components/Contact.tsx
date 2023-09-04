@@ -1,16 +1,30 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 import useAnimation from "../hooks/useAnimation";
 import { CallCalling, I24Support, Location } from "iconsax-react";
 import ContactForm from "./ContactForm";
 
 function Contact() {
   const cfSection = useRef<HTMLDivElement | null>(null);
-  useAnimation(cfSection, 800, "opacity-0", "translate-x-12");
+  const { t } = useTranslation();
+  useAnimation(
+    cfSection,
+    800,
+    "opacity-0",
+    `${
+      i18next.language === "en"
+        ? window.screen.width < 500
+          ? "translate-x-12"
+          : "-translate-x-8"
+        : "translate-x-12"
+    }`
+  );
   return (
-    <>
+    <div>
       <div className="container mx-auto my-24 px-4 md:mt-44" id="contact">
         <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-48 lg:text-2xl">
-          تواصل معنا
+          {t("contact.heading")}
         </h2>
       </div>
       <div>
@@ -27,22 +41,30 @@ function Contact() {
           ></iframe>
           <div
             ref={cfSection}
-            className="relative bottom-72 translate-x-12 opacity-0 transition duration-500  md:bottom-48"
+            className="relative bottom-72 translate-x-12 opacity-0 transition duration-500 md:bottom-48"
           >
             <ContactForm />
           </div>
         </div>
       </div>
-      <div className="container mx-auto mb-20 mt-96 grid grid-cols-1 gap-y-10 max-sm:pr-12 sm:grid-cols-2 sm:justify-items-center sm:gap-y-6 md:mt-48 lg:grid-cols-3">
+      <div
+        className={`container mx-auto mb-20 mt-96 grid grid-cols-1 gap-y-10 ${
+          i18next.language === "en" ? "max-sm:pl-12" : "max-sm:pr-12"
+        } sm:grid-cols-2 sm:justify-items-center sm:gap-y-6 md:mt-48 lg:grid-cols-3`}
+      >
         <div className="flex items-start gap-4">
           <div className="inline-block rounded-full bg-main-color/25 p-4">
             <Location variant="Bulk" className="text-main-color" />
           </div>
           <div className="inline-block">
-            <h5 className="text-lg font-semibold text-wd-service">العنوان</h5>
+            <h5 className="text-lg font-semibold text-wd-service">
+              {t("contact.supportInfo.address.heading")}
+            </h5>
             <p className="text-main-color">
-              حفر الباطن - حي العزيزية
-              <span className="block text-wd-service">المجمعة - حي المرقب</span>
+              {t("contact.supportInfo.address.address1")}
+              <span className="block text-wd-service">
+                {t("contact.supportInfo.address.address2")}
+              </span>
             </p>
           </div>
         </div>
@@ -52,12 +74,12 @@ function Contact() {
           </div>
           <div className="inline-block">
             <h5 className="text-lg font-semibold text-wd-service">
-              رقم الهاتف
+              {t("contact.supportInfo.phoneNumber.heading")}
             </h5>
             <p className="text-main-color" dir="ltr">
-              +966 506 354 147
+              {t("contact.supportInfo.phoneNumber.phoneNumber")}
               <span className="block text-wd-service" dir="rtl">
-                9:00ص - 6:00م
+                {t("contact.supportInfo.phoneNumber.workTimes")}
               </span>
             </p>
           </div>
@@ -68,16 +90,18 @@ function Contact() {
           </div>
           <div className="inline-block">
             <h5 className="text-lg font-semibold text-wd-service">
-              البريد الإلكتروني
+              {t("contact.supportInfo.emailAddress.heading")}
             </h5>
             <p className="text-main-color">
-              Info@athr-sa.com
-              <span className="block text-wd-service">دعم 24 × 7</span>
+              {t("contact.supportInfo.emailAddress.emailAddress")}
+              <span className="block text-wd-service">
+                {t("contact.supportInfo.emailAddress.support")}
+              </span>
             </p>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 export default Contact;
