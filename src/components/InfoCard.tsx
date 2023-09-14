@@ -1,4 +1,3 @@
-import { Message } from "iconsax-react";
 import { useTranslation } from "react-i18next";
 interface InfoCardProps {
   plan: string;
