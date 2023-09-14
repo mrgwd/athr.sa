@@ -4,6 +4,8 @@ import client1 from "../assets/images/Clients/social-media-designs/client1.webp"
 import client2 from "../assets/images/Clients/social-media-designs/client2.webp";
 import client3 from "../assets/images/Clients/social-media-designs/client3.webp";
 import client4 from "../assets/images/Clients/social-media-designs/client4.webp";
+import Plan from "../components/plan";
+import InfoCard from "../components/InfoCard";
 function MAservice() {
   const images = [
     { imgSrc: client1, imgUrl: "/" },
@@ -344,6 +346,93 @@ function MAservice() {
         </div>
       </div>
       <Slideshow images={images} />
+      <div className="container mx-auto my-20 px-4">
+        <h2 className="mb-12 text-center text-ma-service sm:text-xl md:mb-24 md:mt-32 lg:text-2xl">
+          {t("OS.plans.heading")}
+        </h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <Plan
+            isPop={false}
+            plan="SD.plans.basicPlan"
+            price={1499}
+            features={["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8"]}
+          />
+          <Plan
+            isPop={false}
+            plan="SD.plans.proPlan"
+            price={2499}
+            features={[
+              "f1",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "f9",
+              "f10",
+            ]}
+          />
+          <Plan
+            isPop={true}
+            plan="SD.plans.premiumPlan"
+            price={3499}
+            features={[
+              "f1",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "f9",
+              "f10",
+              "f11",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+            ]}
+          />
+          <Plan
+            isPop={false}
+            plan="SD.plans.extraPlan"
+            price={5999}
+            features={[
+              "f1",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "f9",
+              "f10",
+              "f11",
+              "f12",
+              "f13",
+              "f14",
+              "f15",
+              "f16",
+              "f17",
+              "f18",
+            ]}
+          />
+        </div>
+      </div>
+      <div className="container mx-auto my-20 px-4">
+        <h2 className="mb-12 text-center text-ma-service sm:text-xl md:mb-24 md:mt-32 lg:text-2xl">
+          {t("SD.plans.heading")}
+        </h2>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <InfoCard plan="snapchat" features={["i1", "i2", "i3", "i4"]} />
+          <InfoCard plan="google" features={["i1", "i2", "i3", "i4"]} />
+          <InfoCard plan="instagram" features={["i1", "i2", "i3", "i4"]} />
+        </div>
+      </div>
     </div>
   );
 }

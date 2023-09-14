@@ -3,11 +3,12 @@ import Slideshow from "../components/Slideshow";
 import client1 from "../assets/images/Clients/online-stores/client1.webp";
 import client2 from "../assets/images/Clients/online-stores/client2.webp";
 import client3 from "../assets/images/Clients/online-stores/client3.webp";
+import Plan from "../components/plan";
 function OSservice() {
   const images = [
     { imgSrc: client1, imgUrl: "https://shubra.online" },
-    { imgSrc: client2, imgUrl: "https://malamestate.com" },
-    { imgSrc: client3, imgUrl: "https://rahatystore.com" },
+    { imgSrc: client2, imgUrl: "https://rahatystore.com" },
+    { imgSrc: client3, imgUrl: "https://fathint.com" },
   ];
   const { t } = useTranslation();
   return (
@@ -319,21 +320,49 @@ function OSservice() {
           </p>
         </div>
       </div>
-      {/* <div className="flex h-screen flex-col items-center justify-center">
-        <h1 className="mb-4 text-2xl font-bold">Simple Slideshow</h1>
-      </div> */}
       <Slideshow images={images} />
-      {/* <div className="container mx-auto mt-12 grid items-center md:grid-cols-2">
-        <a href="https://fdec-sa.com" target="_blanck">
-          <img src={client1} loading="lazy" alt="logo1" />
-        </a>
-        <a href="https://fdec-sa.com" target="_blanck">
-          <img src={client2} loading="lazy" alt="logo1" />
-        </a>
-        <a href="https://fdec-sa.com" target="_blanck">
-          <img src={client3} loading="lazy" alt="logo1" />
-        </a>
-      </div> */}
+      <div className="container mx-auto my-20 px-4">
+        <h2 className="mb-12 text-center text-dm-service sm:text-xl md:mb-24 md:mt-32 lg:text-2xl">
+          {t("OS.plans.heading")}
+        </h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <Plan
+            isPop={false}
+            plan="OS.plans.basicPlan"
+            price={2499}
+            features={["f1", "f2", "f3", "f4"]}
+          />
+          <Plan
+            isPop={false}
+            plan="OS.plans.proPlan"
+            price={3999}
+            features={["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8"]}
+          />
+          <Plan
+            isPop={true}
+            plan="OS.plans.premiumPlan"
+            price={5999}
+            features={[
+              "f1",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "f9",
+              "f10",
+            ]}
+          />
+          <Plan
+            isPop={false}
+            plan="OS.plans.platinumPlan"
+            price={9999}
+            features={["f1", "f2", "f3", "f4"]}
+          />
+        </div>
+      </div>
     </div>
   );
 }

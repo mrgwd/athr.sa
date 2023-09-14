@@ -1,18 +1,19 @@
 import { RefObject, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowDown2 } from "iconsax-react";
 import DropMenu from "./DropMenu";
 
 interface Props {
-  currentLang: boolean;
-  setCurrentLang: (currentLang: boolean) => void;
+  currentLang: string;
+  handleChangeLang: (currentLang: string) => void;
   menuBtn: HTMLDivElement | null;
 }
-function SideMenu({ menuBtn, currentLang, setCurrentLang }: Props) {
+function SideMenu({ menuBtn, currentLang, handleChangeLang }: Props) {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
   const changeLanguage = (lng: string) => {
-    setCurrentLang(!currentLang);
+    handleChangeLang(currentLang === "ar" ? "en" : "ar");
     i18n.changeLanguage(lng);
   };
   const changeMenuBtnStyle = () => {
@@ -103,10 +104,16 @@ function SideMenu({ menuBtn, currentLang, setCurrentLang }: Props) {
           </ul>
           <hr />
           <button
-            className="text-start font-semibold text-main-color"
-            onClick={() => changeLanguage(currentLang === false ? "en" : "ar")}
+            className={`text-start font-semibold ${
+              location.pathname === "/OSservices"
+                ? "text-dm-service"
+                : location.pathname === "/MAservices"
+                ? "text-ma-service"
+                : "text-main-color"
+            }`}
+            onClick={() => changeLanguage(currentLang === "ar" ? "en" : "ar")}
           >
-            {currentLang === false ? "EN" : "AR"}
+            {localStorage.getItem("lang") === "ar" ? "EN" : "AR"}
           </button>
           <p className="absolute bottom-16 left-1/2 -translate-x-1/2 whitespace-nowrap">
             {t("footer.heading")} {year}

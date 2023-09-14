@@ -1,5 +1,3 @@
-import { useRef } from "react";
-import useAnimation from "../hooks/useAnimation";
 import client1 from "../assets/images/Clients/logo1.png";
 import client2 from "../assets/images/Clients/logo2.png";
 import client3 from "../assets/images/Clients/logo3.png";
@@ -8,14 +6,8 @@ import client5 from "../assets/images/Clients/logo5.png";
 import client6 from "../assets/images/Clients/logo6.png";
 import client7 from "../assets/images/Clients/logo7.png";
 function Experiences() {
-  const eSection = useRef<HTMLDivElement | null>(null);
-  useAnimation(eSection, 700, "opacity-0", "translate-y-12");
   return (
-    <div
-      ref={eSection}
-      className="container mx-auto my-24 translate-y-12 px-4 opacity-0 transition duration-500 md:mt-52"
-      id="experiences"
-    >
+    <div className="container mx-auto my-24 px-4 md:mt-56">
       <div className="relative">
         <div
           data-slider

@@ -6,7 +6,7 @@ import { ShoppingCart, GlobalEdit } from "iconsax-react";
 function ServicesSection() {
   const sSection = useRef<HTMLDivElement | null>(null);
   const { t } = useTranslation();
-  useAnimation(sSection, 500, "opacity-0", "translate-y-20");
+  useAnimation(sSection, 600, "opacity-0", "translate-y-20");
 
   return (
     <div

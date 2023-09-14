@@ -3,11 +3,14 @@ import Slideshow from "../components/Slideshow";
 import client1 from "../assets/images/Clients/web-development/client1.webp";
 import client2 from "../assets/images/Clients/web-development/client2.webp";
 import client3 from "../assets/images/Clients/web-development/client3.webp";
+import client4 from "../assets/images/Clients/web-development/client4.webp";
+import Plan from "../components/plan";
 function WDservice() {
   const images = [
     { imgSrc: client1, imgUrl: "https://www.alwissamlaw.com" },
     { imgSrc: client2, imgUrl: "https://www.qimahriyadh.com" },
     { imgSrc: client3, imgUrl: "http://www.shoofeldonia.com" },
+    { imgSrc: client4, imgUrl: "https://landingemlak.malamestate.com" },
   ];
   const { t } = useTranslation();
   return (
@@ -313,6 +316,43 @@ function WDservice() {
         </div>
       </div>
       <Slideshow images={images} />
+      <div className="container mx-auto my-20 px-4">
+        <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-24 md:mt-32 lg:text-2xl">
+          {t("OS.plans.heading")}
+        </h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <Plan
+            isPop={false}
+            plan="WD.plans.basicPlan"
+            price={1399}
+            features={["f1", "f2", "f3", "f4", "f5"]}
+          />
+          <Plan
+            isPop={false}
+            plan="WD.plans.proPlan"
+            price={2399}
+            features={["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8"]}
+          />
+          <Plan
+            isPop={true}
+            plan="WD.plans.premiumPlan"
+            price={3999}
+            features={[
+              "f1",
+              "f2",
+              "f3",
+              "f4",
+              "f5",
+              "f6",
+              "f7",
+              "f8",
+              "f9",
+              "f10",
+              "f11",
+            ]}
+          />
+        </div>
+      </div>
     </div>
   );
 }

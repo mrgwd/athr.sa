@@ -5,11 +5,11 @@ import useAnimation from "../hooks/useAnimation";
 function About() {
   const aSection = useRef<HTMLDivElement | null>(null);
   const { t } = useTranslation();
-  useAnimation(aSection, 500, "opacity-0", "translate-y-20");
+  useAnimation(aSection, 600, "opacity-0", "translate-y-20");
   return (
     <div
       ref={aSection}
-      className="container mx-auto my-24 translate-y-20 px-4 opacity-0 transition duration-500 md:mt-32"
+      className="container mx-auto my-24 translate-y-20 px-4 opacity-0 transition duration-500 md:mt-32 md:px-12"
       id="about"
     >
       <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-20 lg:text-2xl">
@@ -518,7 +518,7 @@ function About() {
             </defs>
           </svg>
         </div>
-        <div className=" text-wd-service">
+        <div className="max-w-2xl text-wd-service">
           <h3 className="mb-4 font-bold md:text-xl 2xl:text-2xl">
             {t("about.p1")}
           </h3>

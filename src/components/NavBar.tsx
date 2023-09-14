@@ -7,17 +7,17 @@ import logo from "../assets/images/logo/ATHR.png";
 import whiteLogo from "../assets/images/logo/ATHR-w.png";
 interface Props {
   getMenuBtn: (menuBtn: any) => RefObject<HTMLDivElement>;
-  currentLang: boolean;
-  setCurrentLang: (currentLang: boolean) => void;
+  currentLang: string;
+  handleChangeLang: (currentLang: string) => void;
 }
-function NavBar({ getMenuBtn, currentLang, setCurrentLang }: Props) {
+function NavBar({ getMenuBtn, currentLang, handleChangeLang }: Props) {
   const menuBtn: RefObject<HTMLDivElement> = useRef(null);
   useEffect(() => {
     getMenuBtn(menuBtn.current);
   });
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng: string) => {
-    setCurrentLang(!currentLang);
+    handleChangeLang(currentLang === "ar" ? "en" : "ar");
     i18n.changeLanguage(lng);
   };
   const location = useLocation();
@@ -93,9 +93,9 @@ function NavBar({ getMenuBtn, currentLang, setCurrentLang }: Props) {
       </div>
       <div className="hidden font-semibold text-white sm:block">
         <button
-          onClick={() => changeLanguage(currentLang === false ? "en" : "ar")}
+          onClick={() => changeLanguage(currentLang === "ar" ? "en" : "ar")}
         >
-          {currentLang === false ? "EN" : "AR"}
+          {localStorage.getItem("lang") === "ar" ? "EN" : "AR"}
         </button>
       </div>
     </nav>

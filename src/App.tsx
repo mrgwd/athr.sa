@@ -16,18 +16,28 @@ function App() {
   const getMenuBtn = (menuBtn: HTMLDivElement | null): any => {
     setMenuBtn(menuBtn);
   };
-  const [currentLang, setCurrentLang] = useState<boolean>(false);
+  const [currentLang, setCurrentLang] = useState<string>("ar");
+  localStorage.getItem("lang") === null &&
+    localStorage.setItem("lang", currentLang);
+  const handleChangeLang = (newLang: string) => {
+    setCurrentLang(newLang);
+    localStorage.setItem("lang", newLang);
+    console.log(currentLang, localStorage.getItem("lang"));
+  };
   return (
-    <div dir={i18next.language === "en" ? "ltr" : "rtl"}>
+    <div
+      dir={i18next.language === "en" ? "ltr" : "rtl"}
+      className="overflow-hidden"
+    >
       <NavBar
         getMenuBtn={getMenuBtn}
         currentLang={currentLang}
-        setCurrentLang={setCurrentLang}
+        handleChangeLang={handleChangeLang}
       />
       <SideMenu
         menuBtn={menuBtn}
         currentLang={currentLang}
-        setCurrentLang={setCurrentLang}
+        handleChangeLang={handleChangeLang}
       />
       <Routes>
         <Route path="/" element={<HomePage />} />
