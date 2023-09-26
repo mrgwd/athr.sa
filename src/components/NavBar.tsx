@@ -91,7 +91,7 @@ function NavBar({ getMenuBtn, currentLang, handleChangeLang }: Props) {
         <span className="top-1/2 -translate-y-1/2"></span>
         <span className="bottom-0"></span>
       </div>
-      <div className="hidden font-semibold text-main-color sm:block lg:text-white">
+      <div className="hidden  font-semibold text-main-color sm:block lg:text-white">
         <button
           onClick={() => changeLanguage(currentLang === "ar" ? "en" : "ar")}
         >
