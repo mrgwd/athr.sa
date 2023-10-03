@@ -10,6 +10,7 @@ import SideMenu from "./components/SideMenu";
 import { useState } from "react";
 import FloatingContactButton from "./components/FloatingContactButton";
 import i18next from "i18next";
+import PageNotFound from "./components/PageNotFound";
 
 function App() {
   const [menuBtn, setMenuBtn] = useState<HTMLDivElement | null>(null);
@@ -41,9 +42,10 @@ function App() {
       />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/OSservices" element={<OSservice />} />
-        <Route path="/WDservices" element={<WDservice />} />
-        <Route path="/MAservices" element={<MAservice />} />
+        <Route path="OSservices" element={<OSservice />} />
+        <Route path="WDservices" element={<WDservice />} />
+        <Route path="MAservices" element={<MAservice />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <FloatingContactButton />
       <Contact />
